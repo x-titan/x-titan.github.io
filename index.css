@@ -1,249 +1,40 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair:opsz,wght@5..1200,300;5..1200,400;5..1200,500;5..1200,600;5..1200,700;5..1200,800;5..1200,900&family=Nanum+Gothic:wght@400;700;800&family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&family=Comforter&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-:root {
-  --link-hover-color: #fff;
-  --header-color: #fff;
-  --header-height: var(--size4);
-  --header-background: var(--gray-900);
-  --padding: 22px;
-  --height: calc(100vh - var(--header-height));
-}
-
-* {
-  box-sizing: inherit;
-}
-
-body {
-  background-color: white;
-  overflow-y: auto;
-}
-
-body, input, textarea, select, button {
-  font-size: 16px;
-  font-family: 'Inter Tight', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, p, a, li, img, [animate] {
-  opacity: 1;
-  transform: rotateX(0);
-  transform-origin: bottom;
-  transition:
-    opacity 0.5s cubic-bezier(0.85, 0.09, 0.21, 0.97) 0.3s,
-    transform 0.5s cubic-bezier(0.85, 0.09, 0.21, 0.97) 0.3s;
-}
-
-header, footer {
-  background-color: var(--white);
-}
-
-header,
-.header-container,
-.header-nav,
-.header-nav-list,
-.header-link,
-.header-submenu-container,
-.header-submenu-content {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-}
-
-header {
-  width: 100%;
-  justify-content: center;
-  background: var(--header-background);
-  overflow: visible;
-  z-index: 9999;
-  position: sticky;
-  top: 0;
-  user-select: none;
-}
-
-.header-container {
-  height: var(--header-height);
-  justify-content: space-between;
-  font-size: 12px;
-  font-weight: 300;
-  font-family: 'Noto Sans';
-}
-
-.header-container,
-.footer-container,
-[container],
-[content] {
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
-  padding-inline-start: var(--padding);
-  padding-inline-end: var(--padding);
-
-}
+/* ============================================================
+   SETTINGS
+   - Design tokens and global CSS variables (colors, spacing,
+     fonts, radiuses, shadows, etc.)
+   - Used across all other CSS files
+   ============================================================ */
+@import "settings.css";
 
 
-.header-nav {
-  width: -webkit-fill-available;
-  margin: 0 -8px;
-  justify-content: space-between;
-  color: var(--header-color);
-}
+/* ============================================================
+   RESET
+   - Removes or normalizes default browser styling
+   - Ensures consistent base across browsers
+   ============================================================ */
+@import "reset.css";
 
-.header-nav-list {
-  display: flex;
-  gap: 8px;
-  height: 100%;
-}
 
-.header-li-link {
-  height: 100%;
-}
+/* ============================================================
+   CORE / BASE STYLES
+   - Basic typography and default element styling (h1, p, a, ul...)
+   - Box-sizing rules, default font, global body/html styles
+   ============================================================ */
+@import "core.css";
 
-.header-link {
-  padding: 0 var(--size0);
-  /* box-sizing: content-box; */
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-inline-start: 8px;
-  padding-inline-end: 8px;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  opacity: 0.7;
-  transition: none;
-}
 
-.header-link:hover {
-  opacity: 1;
-}
+/* ============================================================
+   LAYOUT
+   - Page structure and layout systems (containers, grid/flex utilities)
+   - Application wrappers (#app, #root), header/footer, sections
+   ============================================================ */
+@import "layout.css";
 
-.header-submenu {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  height: 0;
-  max-height: calc(100vh - var(--header-height));
-  top: 0;
-  left: 0;
-  margin-top: var(--header-height);
-  pointer-events: none;
-}
 
-.header-submenu-container {
-  overflow: hidden;
-  width: 100%;
-  height: fit-content;
-  max-height: 0;
-  transform-origin: top;
-  background: var(--header-background);
-  transition: all 0.5s ease 0.2s;
-  align-items: flex-end;
-  pointer-events: all;
-}
-
-.header-submenu-content {
-  padding: 40px var(--padding);
-  width: 1024px;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.header-li-link:hover .header-submenu {
-  height: 100vh;
-  z-index: 1;
-}
-
-.header-li-link:hover .header-submenu-container {
-  max-height: calc(100vh - var(--header-height));
-}
-
-.header-group {
-  padding-inline-end: 44px;
-  font-size: 12px;
-
-}
-
-.header-group h2 {
-  font-size: 12px;
-  opacity: 0.6;
-  padding-bottom: 8px;
-  font-weight: inherit;
-}
-
-.header-group ul {
-  font-weight: 600;
-}
-
-.header-group:first-of-type {
-  padding-inline-end: 88px;
-  font-size: 24px;
-}
-
-footer {
-  background-color: var(--black);
-  color: white;
-  overflow: hidden;
-  margin-top: auto;
-  position: sticky;
-  top: 100%;
-}
-
-.footer-container {
-  padding: 1px;
-}
-
-/********************/
-/*** Main Content ***/
-/********************/
-
-[flex]>* {
-  flex: 1;
-}
-
-[content] {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-[content],
-[content] [flex] {
-  gap: 8px;
-}
-
-[content] [card], [content] [box] {
-  overflow: hidden;
-}
-
-[pad], [pad="8"] {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-[pad="16"] {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-[pad="22"] {
-  padding-left: 22px;
-  padding-right: 22px;
-}
-
-/*********************/
-/*** Media Content ***/
-/*********************/
-
-@media screen and (max-width: 1200px) {}
-
-@media screen and (max-width: 800px) {
-
-  header [hero] {
-    position: static;
-    transform: translate(0, 0);
-  }
-
-  header [search] {
-    display: none;
-  }
-}
+/* ============================================================
+   COMPONENTS
+   - UI components styled with BEM or other conventions
+   - Buttons, cards, forms, navigation, modals, etc.
+   - Utilities can be placed at the end of this file
+   ============================================================ */
+@import "components.css";

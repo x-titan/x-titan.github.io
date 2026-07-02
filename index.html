@@ -3,58 +3,43 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="/index.js" type="module" defer></script>
-  <title>X Titan</title>
+  <link rel="stylesheet" href="/index.css">
+  <title>X-Titan</title>
 </head>
 
 <body>
-  <style>
-    [card] {
-      background-color: #9b9b9b;
-    }
-  </style>
-  <main content>
-    <section h75 flex="row">
-      <div>
-        <div card>
-          <img src="https://titanium-studio.github.io/src/webp/1.webp" alt="">
-        </div>
-      </div>
-      <div flex="col">
-        <div card>
-          <img src="https://titanium-studio.github.io/src/webp/2.webp" alt="">
-        </div>
-        <div card>
-          <img src="https://titanium-studio.github.io/src/webp/3.webp" alt="">
-        </div>
-      </div>
-    </section>
-    <section h50>
-      <img src="https://titanium-studio.github.io/src/webp/IMG_4252.webp" alt="">
-    </section>
-    <section h75 flex="row">
-      <div flex="col">
-        <div card>
-          <img src="https://titanium-studio.github.io/src/webp/4.webp" alt="">
-        </div>
-        <div card>
-          <img src="https://titanium-studio.github.io/src/webp/city.webp" alt="">
-        </div>
-      </div>
-      <div flex="col">
-        <div card>
-          <img src="https://titanium-studio.github.io/src/webp/flower1.webp" alt="">
-        </div>
-        <div card>
-          <img src="https://titanium-studio.github.io/src/webp/flower2.webp" alt="">
-        </div>
-      </div>
-    </section>
+  <div id="background"></div>
 
-  </main>
+  <div id="root">
+    <div id="root-container">
 
+      <header hidden>
+        <nav class="header-container">
+          <ul class="header-grid">
+            <li><a href="/">Logo</a></li>
+            <li><a href="#">Studio</a></li>
+            <li><a href="https://wearedaima.framer.website/">Inspired design</a></li>
+            <li><a href="#"> - </a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div id="body">
+        <main>
+          <div class="hero">
+            <div class="name bold">X-Titan Creative Studio</div>
+          </div>
+          <div class="preview sticky">
+            <img src="https://titanium-studio.github.io/src/webp/3.webp" alt="">
+          </div>
+        </main>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="overlay"></div>
 </body>
 
 </html>
