@@ -5,7 +5,7 @@ export default function Index() {
   return (
     <main>
       <section>
-        <Heading title="Aset"/>
+        {/* <Heading title="Aset"/> */}
       </section>
       <section>
         <Figure img_src="/webp/3.webp" />

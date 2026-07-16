@@ -1,47 +1,38 @@
 import Heading from "./heading";
+import NavPanel from "./navpanel";
+import Link from "./Link";
+import Newsletter from "./newsletter";
+
+const { a } = Link;
+
+const SiteMapLinks = [
+  a("Home", "/"),
+  a("About", "/about"),
+  a("Projects", "/projects"),
+  a("Contact", "/contact"),
+];
+
+const SocialLinks = [a("Github", "#"), a("Whatsapp", "#"), a("Telegram", "#")];
 
 export default function Footer() {
   return (
-    <footer>
-      <div>
-        <h6>Website</h6>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Projects</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <h6>Socials</h6>
-        <div>
-          <ul>
-            <li>
-              <a href="#">Github</a>
-            </li>
-            <li>
-              <a href="#">Whatsapp</a>
-            </li>
-            <li>
-              <a href="#">Telegram</a>
-            </li>
-          </ul>
+    <footer className="site-footer">
+      <div className="site-footer-top">
+        <div className="site-footer-links">
+          <NavPanel title="Sitemap" links={SiteMapLinks} />
+          <NavPanel
+            className="external-links"
+            title="Social"
+            links={SocialLinks}
+          />
+        </div>
+        <div className="site-footer-form">
+          <Newsletter />
         </div>
       </div>
-      <div>
-        <a href="#">Email me</a>
+      <div className="site-footer-brand">
+        <span>XTitan</span>
       </div>
-      <Heading title="Studio"/>
     </footer>
   );
 }
