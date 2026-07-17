@@ -1,7 +1,14 @@
+"use client";
+
+import type { SubmitEventHandler } from "react";
+
 export default function Newsletter() {
+  const preventDefault: SubmitEventHandler = (e) => e.preventDefault();
+
   return (
     <div className="newsletter">
-      <form action="#" method="post">
+      <form action="/" method="post" onSubmit={preventDefault}>
+      
         <h2>Newsletter</h2>
         <p>Stay up to date with our latest news.</p>
         <label htmlFor="firstName" className="sr-only">
