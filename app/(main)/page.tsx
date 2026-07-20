@@ -8,7 +8,7 @@ import Blur from "@/components/old/blur";
 import Figure from "@/components/old/figure";
 import Heading from "@/components/old/heading";
 
-export default function Index() {
+export default function IndexPage() {
   return (
     <main>
       <Wrapper>
