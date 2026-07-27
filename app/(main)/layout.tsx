@@ -1,5 +1,6 @@
-import { Footer } from "@/components/app/footer";
-import { Header } from "@/components/app/header";
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
+import Blur from "@/components/app/blur";
 import React from "react";
 
 export default function MainLayout({
@@ -12,6 +13,7 @@ export default function MainLayout({
       <Header />
       {children}
       <Footer />
+      <Blur />
     </div>
   );
 }
