@@ -1,0 +1,15 @@
+.input {
+  border-radius: 9999px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f172a;
+    color: #f8fafc;
+  }
+
+  .card {
+    background-color: #1e293b;
+    border-color: #334155;
+  }
+}
