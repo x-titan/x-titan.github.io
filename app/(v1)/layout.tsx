@@ -5,5 +5,5 @@ export default function MainLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="relative flex min-h-screen flex-col">{children}</div>;
+  return <div className="relative min-h-screen flex items-center justify-center">{children}</div>;
 }

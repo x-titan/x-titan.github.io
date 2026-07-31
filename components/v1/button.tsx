@@ -1,10 +1,35 @@
 import { cn } from "@/lib/utils";
-import { Button as ButtonPrimitive } from "@base-ui/react/button";
+import { cva, type VariantProps } from "class-variance-authority";
+import type React from "react";
 
-export function Button({ className, ...props }: ButtonPrimitive.Props) {
+export const buttonVariants = cva("button", {
+  variants: {
+    _type: {
+      icon: "icon",
+      text: "text",
+    },
+    _variant: {
+      filled: "filled",
+      outline: "outline",
+      secondary: "secondary",
+    },
+  },
+  defaultVariants: {
+    _type: "text",
+    _variant: "filled",
+  },
+});
+
+export function Button({
+  className,
+  _type,
+  _variant,
+  ...props
+}: React.ComponentProps<"button"> & VariantProps<typeof buttonVariants>) {
   return (
-    <ButtonPrimitive
-      className={cn("bg-gray-200 hover:bg-gray-300", className)}
+    <button
+      slot="button"
+      className={cn(buttonVariants({ _type, _variant, className }))}
       {...props}
     />
   );

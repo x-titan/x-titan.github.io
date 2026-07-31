@@ -5,9 +5,5 @@ import { LoginFormDemo } from "@/components/demo/login-form";
 import Blur from "@/components/app/blur";
 
 export default function IndexPage() {
-  return (
-    <main>
-      
-    </main>
-  );
+  return <main></main>;
 }
