@@ -1,3 +1,4 @@
+import { Wrapper } from "@/components/v1/wrapper";
 import React from "react";
 
 export default function MainLayout({
@@ -5,5 +6,9 @@ export default function MainLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="relative min-h-screen flex items-center justify-center">{children}</div>;
+  return (
+    <Wrapper >
+      {children}
+    </Wrapper>
+  );
 }

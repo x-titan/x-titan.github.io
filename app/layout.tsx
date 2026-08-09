@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
-import { ThemeProvider } from "@/components/app/theme-provider";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/v1/theme-provider";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +32,12 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       className={cn(
+        geistSans.variable,
+        geistMono.variable,
+        "font-sans",
+        geist.variable,
+      )}
+      data-classname={cn(
         "h-full",
         "antialiased",
         geistSans.variable,
@@ -40,7 +46,7 @@ export default function RootLayout({
         geist.variable,
       )}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body data-classname="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -1,3 +1,7 @@
+"use client";
+
+import "./screen.css";
+
 export function Screen({
   width,
   height,
@@ -9,18 +13,6 @@ export function Screen({
       style={{
         width: width ?? "100%",
         height: height ?? "100%",
-        overflow: "hidden",
-        // position: "relative",
-        // top: "50%",
-        // left: "50%",
-        // transform: "translate(-50%, -50%)",
-        background: "white",
-        color: "black",
-        padding: "1em",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "flex-start",
       }}
     >
       {children}

@@ -1,0 +1,22 @@
+.input {
+  border-radius: 1.5rem;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  height: 3rem;
+  color: var(--primary-foreground);
+  background-color: var(--primary);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 0;
+  /* border: 1px solid var(--primary-foreground); */
+}
+
+.input:focus,
+.input:hover {
+  outline: var(--outline);
+  outline-offset: 2px;
+  cursor: pointer;
+  opacity: 1;
+}

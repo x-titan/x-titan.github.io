@@ -1,15 +1,21 @@
-import * as React from "react"
-import { Input as InputPrimitive } from "@base-ui/react/input"
-import { cn } from "@/lib/utils"
-import styles from "./input.module.css"
+"use client";
 
-export function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+import * as React from "react";
+import { Input as InputPrimitive } from "@base-ui/react/input";
+import { cn } from "@/lib/utils";
+import "./input.css";
+
+export function Input({
+  className,
+  type,
+  ...props
+}: React.ComponentProps<"input">) {
   return (
     <InputPrimitive
       type={type}
       data-slot="input"
-      className={cn(styles.input, className)}
+      className={cn("input", className)}
       {...props}
     />
-  )
+  );
 }

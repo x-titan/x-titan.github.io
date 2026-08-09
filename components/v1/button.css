@@ -1,0 +1,48 @@
+.button {
+  font-size: 1rem;
+}
+
+.button svg {
+  height: 1rem;
+  width: auto;
+}
+
+.button:hover,
+.button:focus {
+  outline: var(--outline);
+  outline-offset: 2px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.button.icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.button.filled {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: 0;
+}
+
+.button.text {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
+  border-radius: 9999rem;
+}
+
+.button.outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
